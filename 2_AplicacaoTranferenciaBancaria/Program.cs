@@ -10,8 +10,6 @@ namespace _2_AplicacaoTranferenciaBancaria
 
         static void Main(string[] args)
         {
-            Conta minhaConta = new Conta(TipoConta.PessoaFisica, 0, 0, "André Oliveira");
-
             string opcaoUsuario = ObterOpcaoUsuario();
 
             while (opcaoUsuario != "X")
@@ -34,8 +32,7 @@ namespace _2_AplicacaoTranferenciaBancaria
                     Depositar();
                         break;
                     case "C":
-                        Console.Clear();
-                        opcaoUsuario = ObterOpcaoUsuario();
+                        Console.Clear();                        
                         break;
                     default:
                         break;
@@ -49,6 +46,8 @@ namespace _2_AplicacaoTranferenciaBancaria
         }
         private static void Sacar()
         {
+            ValidarConta();
+
             Console.WriteLine("Digite o número da conta: ");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -59,6 +58,8 @@ namespace _2_AplicacaoTranferenciaBancaria
         }
         private static void Transferir()
         {
+            ValidarConta();
+
             Console.WriteLine("Digite o número da conta de origem: ");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -72,6 +73,8 @@ namespace _2_AplicacaoTranferenciaBancaria
         }
         private static void Depositar()
         {
+            ValidarConta();
+
             Console.WriteLine("Digite o número da conta: ");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -101,13 +104,9 @@ namespace _2_AplicacaoTranferenciaBancaria
         }
         private static void ListarContas()
         {
-            Console.WriteLine("Listar contas");
+            ValidarConta();
 
-            if (!listContas.Any())
-            {
-                Console.WriteLine("Nenhuma conta cadastrada.");
-                return;
-            }
+            Console.WriteLine("Listar contas");
 
             for (int i = 0; i < listContas.Count; i++)
             {
@@ -115,6 +114,14 @@ namespace _2_AplicacaoTranferenciaBancaria
 
                 Console.Write("#{0} --- ", i);
                 Console.WriteLine(conta.ToString());
+            }
+        }
+        private static void ValidarConta()
+        {
+            if (!listContas.Any())
+            {
+                Console.WriteLine("Nenhuma conta cadastrada.");
+                return;
             }
         }
         private static string ObterOpcaoUsuario()
