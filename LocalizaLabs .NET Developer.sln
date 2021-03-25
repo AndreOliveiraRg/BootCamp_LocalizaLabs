@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_Desafios", "LocalizaLabs 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_AplicacaoTranferenciaBancaria", "2_AplicacaoTranferenciaBancaria\2_AplicacaoTranferenciaBancaria.csproj", "{D5C62466-4876-4DD4-9F56-E5E35BC6176B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Series", "3_Series\3_Series.csproj", "{EBC823E4-EA5C-4FE0-A016-73C337E040E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D5C62466-4876-4DD4-9F56-E5E35BC6176B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5C62466-4876-4DD4-9F56-E5E35BC6176B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5C62466-4876-4DD4-9F56-E5E35BC6176B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC823E4-EA5C-4FE0-A016-73C337E040E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC823E4-EA5C-4FE0-A016-73C337E040E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC823E4-EA5C-4FE0-A016-73C337E040E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC823E4-EA5C-4FE0-A016-73C337E040E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
